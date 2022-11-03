@@ -2,8 +2,12 @@
 
    let x = prompt("enter a number");
 		
-   if(x>-1){
+   if(x>=1){
            document.write("number is positive");
+           }
+           
+		   else if(x==0){
+                document.write("number is zero");
            }
 		   else{
                 document.write("number is negative");
@@ -69,11 +73,29 @@
    
 //program to find marriage eligiblity
 
-   if(x>=21){
-	        document.write("Eligible For Marriage");
+   let y= prompt ("Enter Male Age")
+   let z= prompt ("Enter Female Age")
+
+// marriage eligiblity for male
+
+   if(y>=18){
+	        document.write("Eligible For Marriage - Male");
    }
    else{
-	    document.write("Not Eligible For Marriage");
+	    document.write("Not Eligible For Marriage - Male");
+   }
+   {
+	document.write("<br>");
+	document.write("<br>");
+   }
+   
+// marriage eligiblity for female 
+   
+   if(z>=21){
+	        document.write("Eligible For Marriage - Female");
+   }
+   else{
+	    document.write("Not Eligible For Marriage - Female");
    }
     {
 	document.write("<br>");
@@ -92,15 +114,32 @@
     else if(x<80){
 	    document.write("Grade C");
    }
-    else if(x<100){
+    else if(x<90){
 	    document.write("Grade B");
    }
-    else if(x<100){
+    else if(x<=100){
 	    document.write("Grade A");
    }
     {
 	document.write("<br>");
 	document.write("<br>");
    }
-  
+   
+
+//pattern triangle Shape
+
+for(i=65;i<=73;i++){
+	for(k=72;k>=i;k--){
+		document.write("&nbsp");
+		
+	}
+     for(j=65;j<=i;j++){
+		 if(i%2==0){
+			 continue;
+		 }
+		 document.write(j);
+	 }
+		 document.write("<br>");
+		 
+	 }
 		
