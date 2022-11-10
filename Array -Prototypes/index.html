@@ -1,0 +1,261 @@
+<html>
+<head>
+       <meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="Style.css">
+		<title>Array Methods</title>
+</head>
+<body>
+       <table border="1px">
+	          <thead>
+	                <th>Sl No</th>
+					<th>Methods</td>
+					<th>Syntax</th>
+					<th>Example</th>
+					<th>Output</th>
+					<th>Definition</th>
+			  </thead>
+			  <tbody>
+			         <tr>
+					     <td>1</td>
+						 <td>.toString()</td>
+						 <td>array.toString();</td>
+						 <td>var arr = new Array("orange", "mango", "banana", "sugar");<br>       
+                             var str = arr.toString();<br>
+                             document.write("Returned string is : " + str );
+						</td>
+						<td>orange,mango,banana,sugar</td>
+						<td>Returns a string representing the array and its elements.</td>
+					 </tr>
+					 <tr>
+					     <td>2</td>
+						 <td>.Concat()</td>
+						 <td>array.concat(value1, value2, ..., valueN);</td>
+						 <td>
+						     var alpha = ["a", "b", "c"];<br>
+							 var numeric = [1, 2, 3];<br>
+							 var alphaNumeric = alpha.concat(numeric);<br>
+							 document.write("alphaNumeric : " + alphaNumeric );
+						</td>
+						<td>alphaNumeric : a,b,c,1,2,3 </td>
+						<td>Returns a new array comprised of this array joined with other array(s) and/or value(s).</td>
+					 </tr>
+					 <tr>
+					     <td>3</td>
+						 <td>array.slice()</td>
+						 <td>array.slice( begin [,end] );</td>
+						 <td>
+						    var arr = ["orange", "mango", "banana"];<br>
+							document.write("arr.slice( 0, 2) : " + arr.slice( 0, 2) );    
+						</td>
+						<td>
+						     arr.slice( 0, 2) : mango
+						</td>
+						<td>Extracts a section of an array and returns a new array.</td>
+					 </tr>
+					  <tr>
+					     <td>4</td>
+						 <td>array.lastindexof()</td>
+						 <td>lastIndexOf(searchElement, fromIndex)</td>
+						 <td>
+						      const animals = ['Dodo', 'Tiger', 'Penguin', 'Rabbit'];
+							  console.log(animals.lastIndexOf('Dodo'));<br>
+                              console.log(animals.lastIndexOf('Tiger'));
+						 </td>
+						<td>
+						     animals.lastIndexOf:Expected output -3 <br>
+							 animals.lastIndexOf:Expected Output -2
+							 
+						</td>
+						<td>find the search item in the index right to left</td>
+					 </tr>
+					   <tr>
+					     <td>5</td>
+						 <td>.pop()</td>
+						 <td>array.pop()</td>
+						 <td>
+						     const plants = ['broccoli', 'cauliflower', 'cabbage', 'kale', 'tomato'];<br>
+							 console.log(plants.pop());
+						</td>
+						<td>expected output: "tomato"</td>
+						<td>Removes the last element from an array and returns that element.</td>
+					 </tr>
+					  <tr>
+					     <td>6</td>
+						 <td>.forEach()</td>
+						 <td>forEach(function (element, index, array) { /* … */ }, thisArg)</td>
+						 <td>
+						      const array1 = ['Orange', 'Apple', 'Pineapple'];<br>
+                              array1.forEach(element){<br>
+
+							  => console.log(element));
+						     
+						</td>
+						<td>
+						     expected output: "Orange"<br>
+							 expected output: "Apple"<br>
+							 expected output: "Pineapple"<br>
+						</td>
+						<td>Calls a function for each element in the array.</td>
+					 </tr>
+					   <tr>
+					     <td>7</td>
+						 <td>.filter()</td>
+						 <td>filter(function (element, index, array) { /* … */ }, thisArg)</td>
+						 <td>
+						     const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+                             const result = words.filter(word => word.length > 6);<br>
+							 console.log(result);
+						</td>
+						<td>expected output: Array ["exuberant", "destruction", "present"]</td>
+						<td>Creates a new array with all of the elements of this array for which the provided filtering function returns true.</td>
+					 </tr>
+					 <tr>
+					     <td>8</td>
+						 <td>.sorts()</td>
+						 <td>sort(function compareFn(a, b) { /* … */ })</td>
+						 <td>
+						     var arr = new Array("orange", "mango", "banana", "sugar");         
+							 var sorted = arr.sort();<br>
+							 document.write("Returned string is : " + sorted );
+						 </td>
+						<td>Returned array is : banana,mango,orange,sugar</td>
+						<td>Sorts the elements of an array</td>
+					 </tr>
+					  <tr>
+					     <td>9</td>
+						 <td>.splice()</td>
+						 <td>splice(start, deleteCount, item1, item2, itemN)</td>
+						 <td>
+						     const months = ['Jan', 'March', 'April', 'June'];
+							 months.splice(4, 1, 'May');<br>
+							 console.log(months);  
+						</td>
+						<td>expected output: Array ["Jan", "Feb", "March", "April", "May"]</td>
+						<td>Adds and/or removes elements from an array.</td>
+					 </tr>
+					  <tr>
+					     <td>10</td>
+						 <td>.shift()</td>
+						 <td>array.shift()</td>
+						 <td>
+						      var element = [105, 1, 2, 3].shift();<br>
+                              document.write("Removed element is : " + element );  
+						</td>
+						<td>Removed element is : 105 </td>
+						<td>Removes the first element from an array and returns that element.</td>
+					 </tr>
+					   <tr>
+					     <td>11</td>
+						 <td>.push()</td>
+						 <td>array.push(element0, element1, /* … ,*/ elementN)</td>
+						 <td>
+						    const animals = ['pigs', 'goats', 'sheep'];<br>
+                            const count = animals.push('cows');<br>
+							console.log(animals);
+						     
+						</td>
+						<td>expected output: Array ["pigs", "goats", "sheep", "cows"]</td>
+						<td>The push() method adds one or more elements to the end of an array and returns the new length of the array.</td>
+					 </tr>
+					 <tr>
+					     <td>12</td>
+						 <td>.map()</td>
+						 <td>array.map(function (element, index, array) { /* … */ }, thisArg)</td>
+						 <td>
+						     const array1 = [1, 4, 9, 16];<br>
+							 const map1 = array1.map(x => x * 2);<br>
+							 console.log(map1);
+						     
+						</td>
+						<td> expected output: Array [2, 8, 18, 32]</td>
+						<td>The map() method creates a new array populated with the results of calling a provided function on every element in the calling array.</td>
+					 </tr>
+					  <tr>
+					     <td>13</td>
+						 <td>.findindex()</td>
+						 <td>findIndex(function (element, index, array) { /* … */ }, thisArg)</td>
+						 <td>
+						     const array1 = [5, 12, 8, 130, 44];<br>
+							 const isLargeNumber = (element) => element > 13;<br>
+							 console.log(array1.findIndex(isLargeNumber))
+						     
+						</td>
+						<td>Output-3</td>
+						<td>The findIndex() method returns the index of the first element in an array that satisfies the provided testing function. If no elements satisfy the testing function, -1 is returned</td>
+					 </tr>
+					   <tr>
+					     <td>14</td>
+						 <td>.reduce()</td>
+						 <td>reduce(function (accumulator, currentValue, currentIndex, array) { /* … */ }, initialValue)</td>
+						 <td>
+						     const array1 = [1, 2, 3, 4];<br>
+
+							// 0 + 1 + 2 + 3 + 4<br>
+							const initialValue = 5;<br>
+							const sumWithInitial = array1.reduce(<br>
+							  (previousValue, currentValue) => previousValue + currentValue,<br>
+							  initialValue<br>
+							);<br>
+
+							console.log(sumWithInitial);
+						     
+						</td>
+						<td>expected output: 10</td>
+						<td>Apply a function simultaneously against two values of the array (from left-to-right) as to reduce it to a single value</td>
+					 </tr>
+					  <tr>
+					     <td>15</td>
+						 <td>.length()</td>
+						 <td>array.length()</td>
+						 <td>
+						    const clothing = ['shoes', 'shirts', 'socks', 'sweaters'];<br>
+							console.log(clothing.length);
+						     
+						</td>
+						<td>Output-4</td>
+						<td>Reflects the number of elements in an array.</td>
+					 </tr>
+					  <tr>
+					     <td>16</td>
+						 <td>.constructor()</td>
+						 <td>constructor(argument0, argument1, /* … ,*/ argumentN) { /* … */ }</td>
+						 <td>
+						    const poly1 = new Polygon();<br>
+							console.log(poly1.name);
+						</td>
+						<td>Polygon</td>
+						<td>The constructor method is a special method of a class for creating and initializing an object instance of that class.</td>
+					 </tr>
+					  <tr>
+					     <td>17</td>
+						 <td>.toLocaleString()</td>
+						 <td>toLocaleString(locales, options)</td>
+						 <td>
+						     const array1 = [1, 'a', new Date('21 Dec 1997 14:12:00 UTC')];<br>
+							 const localeString = array1.toLocaleString('en', { timeZone: 'UTC' });<br>
+							 console.log(localeString);
+						</td>
+						<td>expected output: "1,a,12/21/1997, 2:12:00 PM"</td>
+						<td>The toLocaleString() method returns a string representing the elements of the array. The elements are converted to Strings using their toLocaleString methods and these Strings are separated by a locale-specific String (such as a comma ",").</td>
+					 </tr>
+					 
+			  </tbody>
+        </table>			   
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="main.js"></script>
+</body>
+</html>
